@@ -1,0 +1,10 @@
+keytool -v -list -keystore MargretheSkål.keystore
+
+keytool.exe -importcert -file upload_cert.der -keystore MargretheSkål.keystore
+
+keytool -importkeystore -srckeystore MargretheSkaal.keystore -srcstoretype PKCS12 -destkeystore MargretheSkaal2.keystore -deststoretype pkcs12 -srcalias mykey -destalias mykey
+
+keytool -storetype PKCS12 -keystore margretheskaal2.keystore -delete -alias mykey
+
+keytool.exe -importcert -file upload_cert.der -keystore MargretheSkaal.keystore
+
